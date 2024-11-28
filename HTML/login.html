@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login/SignUp</title>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+    <link rel="icon" type="image/x-icon" href="../IMAGES/shopping (1).png">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/modal.css">
+</head>
+
+<body>
+    <div class="fixed-top-header">
+        <div class="logo-container">
+            <img src="../IMAGES/shopping-cart (2).png" alt="Maya Bazar Logo" class="logo">
+            <div class="name">MayaBazaar</div>
+            <nav class="bottom-nav">
+                <a href="../index.html">&#x1F3E0; Home</a>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- start container-->
+    <div class="container">
+        <div class="info">
+            <h1>ACCOUNT LOGIN</h1><span>login to <i class="fa fa-heart"></i> your <a
+                    href="http://andytran.me">Account</a></span>
+        </div>
+    </div>
+    <!-- end container-->
+    <!-- start form-->
+    <div class="form">
+        <!-- <div class="image"><img src="../IMAGES/maya_logo1.png" /></div> -->
+
+
+        <form class="register-form" autocomplete="on" onsubmit="return registerUser(event)">
+            <div class="group">
+                <div class="input-group">
+                    <input type="text" id="firstname" placeholder="First Name" onblur="validateFirstname()" />
+                    <small id="firstnameError" class="text-danger small-error-message"></small>
+                    <div class="input-group-append">
+                        <span class="input-icon"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="input-group">
+                    <input type="text" id="lastname" placeholder="Last Name (optional)" onblur="validateLastname()" />
+                    <small id="lastnameError" class="text-danger small-error-message"></small>
+                    <div class="input-group-append">
+                        <span class="input-icon"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="input-group">
+                    <input type="text" id="username" class="input" placeholder="Enter Username"
+                        onblur="validateUsername()">
+                    <small id="usernameError" class="text-danger small-error-message"></small>
+                    <div class="input-group-append">
+                        <span class="input-icon"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="input-group">
+                    <input type="email" id="email" class="input" placeholder="Enter Email" onblur="validateEmail()">
+                    <small id="emailError" class="text-danger small-error-message"></small>
+                    <div class="input-group-append">
+                        <span class="input-icon"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="input-group">
+                    <input type="tel" id="telephone" class="input" placeholder="Enter Phone Number"
+                        onblur="validateMobile()">
+                    <small id="telephoneError" class="text-danger small-error-message"></small>
+                    <div class="input-group-append">
+                        <span class="input-icon"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="group">
+                <div class="input-group">
+                    <input id="password" name="password" type="password" placeholder="Password"
+                        onblur="validatePassword()" />
+                    <small id="passwordError" class="text-danger small-error-message"></small>
+                    <div class="input-group-append">
+                        <span class="input-icon"></span>
+                    </div>
+                </div>
+                <div class="show-password">
+                    <input type="checkbox" id="show" onclick="showPassword()">
+                    <label for="show">Show Password</label>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="input-group">
+                    <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password"
+                        onblur="validateConfirmPassword()" />
+                    <small id="confirmPasswordError" class="text-danger small-error-message"></small>
+                    <div class="input-group-append">
+                        <span class="input-icon"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <div class="row">
+                    <div class="col-6">
+                        <!-- Submit Button -->
+                        <input type="submit" value="Sign Up" class="btn btn-outline-success" />
+                    </div>
+                    <div class="col-6">
+                        <!-- Reset Button -->
+                        <input type="reset" value="Reset" class="btn btn-outline-danger" />
+                    </div>
+                </div>
+            </div>
+
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+
+        <div id="result" class="text-success text-center mt-3"></div>
+
+        <form class="login-form" onsubmit="loginValidation(event)">
+            <div class="group">
+                <div class="input-group">
+                    <input type="text" id="loginUsername" placeholder="username" name="username"
+                        onblur="validateLoginUsername()" />
+                    <small id="loginUsernameError" class="text-danger small-error-message"></small>
+                    <div class="input-group-append">
+                        <span class="input-icon"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="input-group">
+                    <input id="loginPassword" name="password" type="password" placeholder="Password"
+                        onblur="validateLoginPassword()" />
+                    <small id="loginPasswordError" class="text-danger small-error-message"></small>
+                    <div class="input-group-append">
+                        <span class="input-icon"></span>
+                    </div>
+                    <div class="show-password loginpass">
+                        <input type="checkbox" id="Showlogin" onclick="showPasswordLogin()">
+                        <label for="Showlogin">Show Password</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit">login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+            <p class="forgotpass"><a href="./ForgotPassword.html"
+                    style="font-size: 14px; text-decoration: none;">ForgotPassword</a></p>
+        </form>
+        <div id="validationError" style="color: red; font-size: 0.9em;"></div>
+
+        <div id="modalBox" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modalIcon" class="modal-icon"></div>
+                <p id="modalMessage"></p>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="copy-rights">
+            &copy; 2024 Your Maya Bazaar.com, All rights reserved.
+        </div>
+    </footer>
+
+    <!-- end form-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="../JS/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+
+
+.fixed-top-header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.bottom-nav a {
+  margin-left: 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.bottom-nav a:hover {
+  color: #007bff;
+}
+
+body {
+  background: #001524;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body:before {
+  background-image: url(../IMAGES/login.jpg);
+  object-fit:contain;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+/*start container*/
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  margin-top:100px !important ;
+  text-align: center;
+}
+.container .info h1 {
+  
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color:#eeeeee ;
+}
+.container .info span {
+  color:#ffffff ;
+  font-size: 15px;
+}
+.container .info span a {
+  color: #FFFCF2;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+/*end container*/
+/*start form*/
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFCF2;
+  max-width: 400px;
+  margin: 0 auto 100px;
+  padding: 30px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  text-align: center;
+}
+.form .image {
+  /* background: #84a98c; */
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto 30px;
+  padding: 50px 30px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form .image img {
+  display: block;
+  width: 100%;
+  border-radius: 100px;
+}
+.form input,#state {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form .input-group{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form button {
+  outline: 0;
+  background: #15616D;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #EF3B3A;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+#DOB,#state{
+    font-size:14px;
+    color:#747474;
+    }
+
+.input-icon {
+  position: absolute;
+  right: 10px;
+  top: 38%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  visibility: visible !important;
+}
+
+/* Make sure input groups have relative positioning */
+/* Style the input field and the checkbox inside */
+.input-group {
+position: relative;
+margin-bottom: 15px;
+}
+
+.input-group input {
+padding-right: 40px; /* Leave space for the checkbox */
+}
+
+.input-group-append {
+position: absolute;
+right: 10px; /* Position the checkbox inside the input */
+top: 50%;
+transform: translateY(-50%);
+}
+
+.input-group-append input {
+position: absolute;
+right: 5px;
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+opacity: 0;
+}
+
+.input-group-append label {
+cursor: pointer;
+color: #007bff;
+font-size: 12px;
+transform: translateY(-50%);
+display: inline-block;
+vertical-align: -3.2em;
+}
+
+.small-error-message {
+font-size: 12px;
+color: red;
+}
+.show-password {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: -11px;
+  margin-left: 10px;
+}
+.loginpass{
+  margin-top: 5px;
+  margin-left: 10px !important;
+}
+.show-password input[type="checkbox"] {
+  width: auto;
+  height: auto;
+}
+
+.show-password label {
+  cursor: pointer;
+  font-size: 14px;
+  color: #a8a8a8;
+  margin-bottom: 0;
+  display: inline-block;
+}
+footer {
+  position: relative; /* Adjust as needed */
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #2c3e50; /* Match your color theme */
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.copy-rights {
+  font-size: 14px; /* Adjust size as required */
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0;
+}
+
+.forgotpass{
+  margin-top: 14px !important;
+  margin-bottom: 1rem;
+}
+
+/* Red border for invalid input */
+input.invalid {
+  border: 2px solid rgb(255, 14, 14);
+}
+
+/* Red error text */
+span.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Styling for the input icon (warning icon) */
+.input-group-append {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the warning icon */
+.input-group-text i {
+  font-size: 1.2em;
+}
+
+/* Optionally style the warning icon */
+#warningIcon {
+  color: red;
+}
+
+/* Optionally style the password visibility icon */
+#eyeIcon {
+  cursor: pointer;
+}
+
+/* Error message styling */
+.small-error-message {
+  font-size: 0.875rem;
+  margin-top: 5px;
+}

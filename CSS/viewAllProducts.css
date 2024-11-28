@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    margin-top: 40px !important;
+}
+
+.main-content {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bottom-nav {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+}
+
+.bottom-nav a {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 8pxpx;
+    font-weight: bold;
+}
+
+.bottom-nav a:hover {
+    background-color: #FFECD1;
+    color: #070707;
+    text-decoration: none;
+}
+
+
+.navbar {
+    background-color: #252422;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #FFFCF2 !important;
+    font-size: 1.5rem;
+}
+
+.navbar-brand img {
+    border-radius: 10px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #FFFCF2 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #eb5e28 !important;
+}
+
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 6px !important;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #001524;
+    color: #068536;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.product-name {
+    font-weight: bold;
+}
+
+.product-category,
+.product-price {
+    font-size: 16px;
+    color: #555;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.product-description {
+    max-width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.product-stock {
+    font-weight: bold;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-group button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    /* Remove border */
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    /* Remove border */
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+
+.no-products {
+    text-align: center;
+    font-size: 18px;
+    color: #dc3545;
+    padding: 20px;
+}
+
+.product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.table-container {
+    position: relative;
+}
+
+/* Add Product Button Positioned at the Top-Right */
+.add-product-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: -50px;
+}
+
+.add-product-btn:hover {
+    background-color: #218838;
+}
+
+.input-row input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-row label {
+    flex: 1;
+}
+
+.input-row input[type="file"] {
+    width: auto;
+}
+
+.input-row button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-row button:hover {
+    background-color: #0056b3;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}

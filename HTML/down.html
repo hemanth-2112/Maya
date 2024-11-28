@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to download localStorage data as a JSON file
+function downloadLocalStorageData() {
+    // Convert localStorage data to an object (assuming data is stored as a JSON string)
+    const data = {};
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const value = localStorage.getItem(key);
+        data[key] = JSON.parse(value);  // Assuming data is stored as a JSON string
+    }
+
+    // Convert the data object to a JSON string
+    const jsonData = JSON.stringify(data, null, 2);
+
+    // Create a Blob from the JSON data
+    const blob = new Blob([jsonData], { type: 'application/json' });
+
+    // Create an anchor tag to trigger the download
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'localStorageData.json'; // Name of the downloaded file
+    link.click(); // Trigger the download
+}
+
+// Call the function to download the data
+downloadLocalStorageData();
+
+    </script>
+</body>
+</html>

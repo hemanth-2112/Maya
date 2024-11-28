@@ -1,0 +1,300 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sevillana&display=swap');
+
+
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Background Styling */
+.background {
+    background-image: url('../IMAGES/pexels-ekaterina-bolovtsova-6766261.jpg');
+    background-size: 100%;
+    height: 740px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.main-content {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-nav {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+}
+
+.bottom-nav a {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 8pxpx;
+    font-weight: bold;
+}
+
+.bottom-nav a:hover {
+    background-color: #FFECD1;
+    color: #070707;
+    text-decoration: none;
+}
+
+
+/* Background Overlay */
+.background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* Profile Container */
+.profile-container {
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+    z-index: 1;
+    margin-top: 3px;
+}
+
+/* Card Styling */
+.profile-card {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(245, 245, 245, 0.95));
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Card Hover Effect */
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+img {
+    border-radius: 112px;
+    padding: 10px;
+}
+
+
+/* General Profile Image Styling */
+.profile-image {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    border: 1px solid #000000;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Edit Icon Styling */
+.edit-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #050505;
+    color: white;
+    font-size: 14px;
+    padding: 5px 7px;
+    border-radius: 10%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-icon:hover {
+    background-color: #24e92e;
+    transform: scale(1.1);
+}
+
+/* Hidden File Input */
+#upload-picture {
+    display: none;
+}
+
+/* Title Styling */
+h1,
+h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-field {
+    width: 86%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #ff4e50;
+    outline: none;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Buttons */
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#edit-button,
+#save-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.close {
+    background-color: #f44336;
+    color: white;
+}
+
+.cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Form Visibility */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        width: 90%;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .input-field {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+#close-button {
+    font-size: 30px;
+    /* Adjust font size */
+    color: #333;
+    /* Default color */
+    transition: color 0.3s ease;
+}
+
+#close-button:hover {
+    color: #ff4e50;
+    /* Hover color */
+}
+
+
+
+.header {
+    background-color: #000000;
+    transition: top 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+    /* Set a fixed height for the header */
+    padding: 10px 0;
+    /* Ensure consistent padding */
+}
+
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: #000000;
+}
+
+.header-item {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container .logo {
+    width: 92px;
+    height: 73px;
+    border-radius: 50%;
+}
+
+.logo-container .name {
+    font-size: 1.2em;
+    margin-left: 5px;
+    margin-top: 20px;
+    color: white;
+    font-family: "Sevillana", cursive;
+}

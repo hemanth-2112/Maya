@@ -1,0 +1,126 @@
+/* orders.css */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.fixed-top-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.bottom-nav a {
+    margin-left: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.bottom-nav a:hover {
+    color: #007bff;
+}
+
+footer {
+    padding: 10px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #ddd;
+}
+
+.card-header {
+    background-color: #007bff;
+}
+
+.card-body {
+    background-color: #f9f9f9;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.card-header h5 {
+    margin: 0;
+}
+
+.card-body p {
+    font-size: 14px;
+}
+
+/* Style for the Cancel Order Modal */
+#cancel-order-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#cancel-order-modal .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+#cancel-order-modal .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Span the entire width of the viewport */
+    background-color: #343a40;
+    /* Match "bg-dark" */
+    color: white;
+    /* Match "text-light" */
+    text-align: center;
+    /* Center the text */
+    padding: 10px 0;
+    /* Add padding for spacing */
+    z-index: 1000;
+    /* Ensure it stays above other elements if needed */
+  }
+  

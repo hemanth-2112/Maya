@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - MayaBazaar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../IMAGES/shopping (1).png">
+    <link rel="stylesheet" href="../CSS/orders.css">
+</head>
+
+<body>
+    <div class="fixed-top-header">
+        <div class="logo-container">
+            <img src="../IMAGES/shopping-cart (2).png" alt="Maya Bazar Logo" class="logo">
+            <div class="name">MayaBazaar</div>
+            <nav class="bottom-nav">
+                <a href="../index.html">&#x1F3E0; Home</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container mt-5 pt-5">
+        <h2 class="text-center mb-4">My Orders</h2>
+        <div id="order-list" class="row"></div>
+    </div>
+
+    <footer class="mt-5">
+        <p class="mb-0 text-center">© 1996-2024, MayaBazaar.com, info or its affiliates</p>
+    </footer>
+    <!-- Order List Container -->
+    <div id="order-list" class="row">
+        <!-- Orders will be dynamically inserted here -->
+    </div>
+
+    <!-- Modal for Order Cancellation Confirmation -->
+    <div class="modal" id="cancel-order-modal">
+        <div class="modal-content">
+            <h4>Are you sure you want to cancel this order?</h4>
+            <div class="modal-actions">
+                <button id="confirm-cancel" class="btn btn-danger">Yes, Cancel Order</button>
+                <button id="cancel-cancel" class="btn btn-secondary">No, Keep Order</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="loginModal" class="modal fade bg-black" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">No User Logged In</h5>
+                </div>
+                <div class="modal-body">
+                    <p>You are not logged in. Would you like to log in or sign up?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cancel-login">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmLogin">Login/Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/orders.js"></script>
+</body>
+
+</html>
