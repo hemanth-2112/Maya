@@ -507,3 +507,11 @@ function isUserLoggedIn(){
   }
 
 }
+
+fetch('./localStorageData.json')
+  .then(response => response.json())
+  .then(products => {
+    localStorage.setItem('products', JSON.stringify(products));
+    console.log('Product data has been saved to localStorage');
+  })
+  .catch(error => console.error('Error loading product data:', error));
